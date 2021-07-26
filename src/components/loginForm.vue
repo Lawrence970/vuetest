@@ -1,16 +1,16 @@
 <template>
-  <h1 class="green">hello</h1>
+  <div>
+    <p>hellow</p>
+  </div>
+
 </template>
 
 <script>
 export default {
-    name: 'test',
 
 }
 </script>
 
 <style scoped>
-.green {
-    background-color:green;
-}
+
 </style>
