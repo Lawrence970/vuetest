@@ -1,15 +1,20 @@
+<!-- ??? This file is where everything gets compiled, it then goes to index.html to be injected -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <test/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import test from './components/test.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    test
+    
   }
 }
 </script>
