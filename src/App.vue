@@ -1,10 +1,19 @@
 <template>
-  
+  <loginForm/>
 </template>
 
-<style>
-#app {
-  text-align: center;
-  color: #2c3e50;
+<script>
+// ? import all COMPONENTS HERE
+import landingPage from "./components/landing.vue"
+import loginForm from "./components/loginForm.vue"
+
+
+export default {
+  name: 'App',
+  components: { landingPage, loginForm }
 }
+</script>
+
+<style>
+
 </style>
