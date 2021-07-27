@@ -7,8 +7,11 @@
     <hr>
 
     <span class="justify-between">
-        <button type="button"  class="input-button">Sign In</button>
-        <button type="button" v-on:click="type_role=`company`" class="input-button">Sign Up</button>
+        <input type="text"      class="input-field"  v-model="logInEmail" placeholder="Email" autofocus/>
+        <input type="password"  class="input-field"  v-model="logInPassword" placeholder=" Password"/>
+        <button type="button"   class="input-button" v-on:click="logInUser">continue</button>
+        <p class="para-text">Need An Account?</p>
+        <button type="button"   class="input-button" v-on:click="type_role=`company`" >Sign Up!</button>
     </span>
     
       
@@ -19,31 +22,48 @@
 
 
 <script>
+
 export default {
     name: 'landingPage',
 
 }
 </script>
 
-<!-- * begining of styles for this component -->
-<!-- * without using the scoped option on the style tag, all styles are now global across components -->
 <style >
+
+/* ! ALL STYLES IN THIS COMPONENT ARE GLOBAL UNLESS SCOPED!!! */
+
+body {
+    --color-primary: #008cff; 
+    --color-secondary: #1c1c1c;
+
+
+    margin:0;
+    padding:0;
+}
+
+hr {
+    width: 100%;
+    align-content: center;
+}
 
 #landingPage {
     padding:0;
     margin-left:150px;
     margin-right:150px;
+    font-family: sans-serif;
 }
 
 .large-text-h1 {
     font-size: 2.3em;
-    color: #1c1c1c;
+    color: var(--color-secondary);
     text-align: center;
-    font-family: sans-serif;
+
 }
 
 .para-text {
     text-align: center;
+    font-size: 110%;
 }
 
 .justify-between {
@@ -52,22 +72,30 @@ export default {
 
 }
 
-hr {
-    width: 35%;
-    align-content: center;
+.input-field {
+    width: 300px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: var(--color-secondary);
+    padding: 5px;
+    background-color: white;
+    box-shadow: 2px 0px 2px 2px rgb(0 0 0 / 10%);
+    font-size: 1.4em;
 }
 
 .input-button {
     width: 200px;
     height: 40px;
-    margin: 0;
     margin: 20px;
     border-radius: 50px;
     border: none;
     outline: none;
     color: white;
     padding: 5px;
-    background-color: #008cff;
+    background-color: var(--color-primary);
     box-shadow: 4px 6px 8px 2px rgb(0 0 0 / 10%);
     font-size: 1.4em;
 }
