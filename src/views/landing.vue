@@ -7,11 +7,11 @@
     <hr>
 
     <span class="justify-between">
-        <input type="text"      class="input-field"  v-model="logInEmail" placeholder="Email" autofocus/>
-        <input type="password"  class="input-field"  v-model="logInPassword" placeholder=" Password"/>
+        <input type="text"      class="input-field"  v-model="logInEmail" placeholder="email" autofocus/>
+        <input type="password"  class="input-field"  v-model="logInPassword" placeholder="password"/>
         <button type="button"   class="input-button" v-on:click="logInUser">continue</button>
         <p class="para-text">Need An Account?</p>
-        <button type="button"   class="input-button" v-on:click="type_role=`company`" >Sign Up!</button>
+        <router-link v-bind:to="signUpPage">Sign Up!</router-link>
     </span>
     
       
@@ -36,6 +36,8 @@ export default {
 body {
     --color-primary: #008cff; 
     --color-secondary: #1c1c1c;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
 
 
     margin:0;
@@ -56,6 +58,13 @@ hr {
 
 .large-text-h1 {
     font-size: 2.3em;
+    color: var(--color-secondary);
+    text-align: center;
+
+}
+
+.large-text-h2 {
+    font-size: 2em;
     color: var(--color-secondary);
     text-align: center;
 
@@ -84,6 +93,7 @@ hr {
     background-color: white;
     box-shadow: 2px 0px 2px 2px rgb(0 0 0 / 10%);
     font-size: 1.4em;
+    padding-left: 6px;
 }
 
 .input-button {
@@ -98,6 +108,10 @@ hr {
     background-color: var(--color-primary);
     box-shadow: 4px 6px 8px 2px rgb(0 0 0 / 10%);
     font-size: 1.4em;
+}
+
+.logout-button {
+    background-color: var(--color-error);
 }
 
 
